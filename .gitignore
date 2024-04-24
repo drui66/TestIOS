@@ -1,0 +1,23 @@
+# Xcode
+.DS_Store
+*/.DS_Store
+xcuserdata/
+*.xcworkspace/
+*.xcuserstate
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Carthage
+/Carthage/
+/Carthage/Build/
+
+# IDE
+*.swp
+*.swo
+*~
+*.hmap
+*.xccheckout
+.idea/
+.vscode/

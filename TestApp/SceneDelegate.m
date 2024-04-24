@@ -20,6 +20,8 @@
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.frame = [UIScreen mainScreen].bounds;
     
+    [self setupLogger]; // 配置日志记录器
+    
     LoginController *loginController = [[LoginController alloc] init];
     self.window.rootViewController = loginController;
     [self.window makeKeyAndVisible];
@@ -56,6 +58,18 @@
     // Called as the scene transitions from the foreground to the background.
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
+}
+
+// 配置日志记录器
+- (void)setupLogger {
+    // 设置日志格式
+    [DDLog addLogger:[DDOSLogger sharedInstance]]; // 将日志输出到控制台
+    
+    // 配置文件日志器
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 日志每 24 小时滚动一次
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7; // 保留最近 7 天的日志文件
+    [DDLog addLogger:fileLogger];
 }
 
 

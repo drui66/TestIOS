@@ -1,0 +1,22 @@
+//
+//  TestApp.pch
+//  TestApp
+//
+//  Created by 邓竺芮 on 2024/4/24.
+//
+
+#ifndef TestApp_pch
+#define TestApp_pch
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+// 设置全局日志级别
+#ifdef DEBUG
+  static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+#else
+  static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+#endif
+
+#endif /* TestApp_pch */
