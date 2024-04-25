@@ -8,6 +8,8 @@
 #import "HomeController.h"
 #import "LoginController.h"
 #import "Tool.h"
+#import <AFNetworking/AFNetworking.h>
+#import "CustomJSONResponseSerializer.h"
 
 @interface HomeController ()
 
@@ -20,17 +22,17 @@
    
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(50, 100, 100, 100);
-    [button setTitle:@"退出" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview: button];
+    UIButton *logoutButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [logoutButton setTitle:@"退出" forState:UIControlStateNormal];
+    [logoutButton addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: logoutButton];
+    logoutButton.frame = CGRectMake(100, 100, 100, 50);
     
-    DDLogVerbose(@"Verbose");
-    DDLogDebug(@"Debug");
-    DDLogInfo(@"Info");
-    DDLogWarn(@"Warn");
-    DDLogError(@"Error");
+    UIButton *requestButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [requestButton setTitle:@"网络请求" forState:UIControlStateNormal];
+    [requestButton addTarget:self action:@selector(request) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: requestButton];
+    requestButton.frame = CGRectMake(100, 200, 100, 50);
 }
 
 - (void)logout {
@@ -40,6 +42,33 @@
         keyWindow.rootViewController = controller;
         [keyWindow makeKeyAndVisible];
     }
+}
+
+- (void)request {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    configuration.timeoutIntervalForRequest = 10;
+    configuration.timeoutIntervalForResource = 10;
+    NSURL *baseURL = [NSURL URLWithString:@"http://zg.zhgdi.com:10000/"];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL sessionConfiguration:configuration];
+    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.requestSerializer = requestSerializer;
+    
+    CustomJSONResponseSerializer *responseSerializer = [CustomJSONResponseSerializer serializer];
+    manager.responseSerializer = responseSerializer;
+    
+    NSString *urlString = @"labor/home/projectHomeLaborStatistics";
+    NSDictionary *params = @{
+        @"deptId": @"1552585051064762369"
+    };
+    
+//    NSMutableURLRequest *request = [requestSerializer requestWithMethod:@"GET" URLString:urlString parameters:params error:nil];
+//    NSURLSessionDataTask *dataTask = [manager ];
+//    [dataTask resume];
+    [manager POST:urlString parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 @end

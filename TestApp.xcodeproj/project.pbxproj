@@ -16,6 +16,7 @@
 		F69899462BCE71CA00F2F625 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69899452BCE71CA00F2F625 /* LoginController.m */; };
 		F69899492BCE71D900F2F625 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69899482BCE71D900F2F625 /* HomeController.m */; };
 		F698994C2BCE7AE300F2F625 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = F698994B2BCE7AE300F2F625 /* Tool.m */; };
+		F6BBB5752BDA51580050E3E9 /* CustomJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BBB5742BDA51580050E3E9 /* CustomJSONResponseSerializer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,8 @@
 		F69899482BCE71D900F2F625 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		F698994A2BCE7AE300F2F625 /* Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		F698994B2BCE7AE300F2F625 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		F6BBB5732BDA51580050E3E9 /* CustomJSONResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomJSONResponseSerializer.h; sourceTree = "<group>"; };
+		F6BBB5742BDA51580050E3E9 /* CustomJSONResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomJSONResponseSerializer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,8 @@
 				F69899452BCE71CA00F2F625 /* LoginController.m */,
 				F69899472BCE71D900F2F625 /* HomeController.h */,
 				F69899482BCE71D900F2F625 /* HomeController.m */,
+				F6BBB5732BDA51580050E3E9 /* CustomJSONResponseSerializer.h */,
+				F6BBB5742BDA51580050E3E9 /* CustomJSONResponseSerializer.m */,
 				F698994A2BCE7AE300F2F625 /* Tool.h */,
 				F698994B2BCE7AE300F2F625 /* Tool.m */,
 			);
@@ -234,6 +239,7 @@
 				F69899462BCE71CA00F2F625 /* LoginController.m in Sources */,
 				F698993D2BCE702E00F2F625 /* main.m in Sources */,
 				F698994C2BCE7AE300F2F625 /* Tool.m in Sources */,
+				F6BBB5752BDA51580050E3E9 /* CustomJSONResponseSerializer.m in Sources */,
 				F69899492BCE71D900F2F625 /* HomeController.m in Sources */,
 				F698992F2BCE702D00F2F625 /* SceneDelegate.m in Sources */,
 			);
@@ -385,7 +391,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,7 +425,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
