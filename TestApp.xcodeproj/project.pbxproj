@@ -41,6 +41,7 @@
 		F698994B2BCE7AE300F2F625 /* Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
 		F6BBB5732BDA51580050E3E9 /* CustomJSONResponseSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomJSONResponseSerializer.h; sourceTree = "<group>"; };
 		F6BBB5742BDA51580050E3E9 /* CustomJSONResponseSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomJSONResponseSerializer.m; sourceTree = "<group>"; };
+		F6BBB5762BDA57910050E3E9 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		F698991E2BCE702D00F2F625 = {
 			isa = PBXGroup;
 			children = (
+				F6BBB5762BDA57910050E3E9 /* PrivacyInfo.xcprivacy */,
 				F69899292BCE702D00F2F625 /* TestApp */,
 				F69899282BCE702D00F2F625 /* Products */,
 				5A21F8BA7B24EAF3EA718F0E /* Pods */,

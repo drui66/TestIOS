@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ico-Bl-MYD">
-                                <rect key="frame" x="152" y="426" width="90" height="25"/>
+                                <rect key="frame" x="151.66666666666666" y="426" width="90" height="25"/>
                                 <attributedString key="attributedText">
                                     <fragment content="测试启动页">
                                         <attributes>
@@ -30,12 +30,21 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchImage" translatesAutoresizingMaskIntoConstraints="NO" id="XuJ-yt-PvE">
+                                <rect key="frame" x="76.666666666666686" y="250" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0d3-ft-hHc"/>
+                                    <constraint firstAttribute="width" constant="240" id="qhw-vO-6wq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ico-Bl-MYD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RNw-h4-mFx"/>
                             <constraint firstItem="Ico-Bl-MYD" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TAT-IB-531"/>
+                            <constraint firstItem="XuJ-yt-PvE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="191" id="ZxJ-RY-u2c"/>
+                            <constraint firstItem="XuJ-yt-PvE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="l11-Gz-rkM"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,6 +54,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="launchImage" width="26.666666030883789" height="26.666666030883789"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
