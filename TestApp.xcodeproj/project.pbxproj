@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		38BB92777BC46BC7059BB180 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA6801EE2375F31E2006AB8 /* Pods_TestApp.framework */; };
+		F6654FB42C2A9DF400188914 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6654FB32C2A9DF400188914 /* WebViewController.m */; };
 		F698992C2BCE702D00F2F625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F698992B2BCE702D00F2F625 /* AppDelegate.m */; };
 		F698992F2BCE702D00F2F625 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F698992E2BCE702D00F2F625 /* SceneDelegate.m */; };
 		F69899372BCE702E00F2F625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69899362BCE702E00F2F625 /* Assets.xcassets */; };
@@ -23,6 +24,8 @@
 		5FA6801EE2375F31E2006AB8 /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A12771965BEEDA964CF4186 /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		AD57C9DB891F44666E7D6964 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F6654FB22C2A9DF400188914 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		F6654FB32C2A9DF400188914 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		F69435172BD8FBC9006FE907 /* TestApp.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestApp.pch; sourceTree = "<group>"; };
 		F69899272BCE702D00F2F625 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F698992A2BCE702D00F2F625 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				F6BBB5742BDA51580050E3E9 /* CustomJSONResponseSerializer.m */,
 				F698994A2BCE7AE300F2F625 /* Tool.h */,
 				F698994B2BCE7AE300F2F625 /* Tool.m */,
+				F6654FB22C2A9DF400188914 /* WebViewController.h */,
+				F6654FB32C2A9DF400188914 /* WebViewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -240,6 +245,7 @@
 				F698992C2BCE702D00F2F625 /* AppDelegate.m in Sources */,
 				F69899462BCE71CA00F2F625 /* LoginController.m in Sources */,
 				F698993D2BCE702E00F2F625 /* main.m in Sources */,
+				F6654FB42C2A9DF400188914 /* WebViewController.m in Sources */,
 				F698994C2BCE7AE300F2F625 /* Tool.m in Sources */,
 				F6BBB5752BDA51580050E3E9 /* CustomJSONResponseSerializer.m in Sources */,
 				F69899492BCE71D900F2F625 /* HomeController.m in Sources */,

@@ -7,6 +7,7 @@
 
 #import "HomeController.h"
 #import "LoginController.h"
+#import "WebViewController.h"
 #import "Tool.h"
 #import <AFNetworking/AFNetworking.h>
 #import "CustomJSONResponseSerializer.h"
@@ -32,7 +33,13 @@
     [requestButton setTitle:@"网络请求" forState:UIControlStateNormal];
     [requestButton addTarget:self action:@selector(request) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: requestButton];
-    requestButton.frame = CGRectMake(100, 200, 100, 50);
+    requestButton.frame = CGRectMake(100, 150, 100, 50);
+    
+    UIButton *webViewButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [webViewButton setTitle:@"网页" forState:UIControlStateNormal];
+    [webViewButton addTarget:self action:@selector(turnWebView) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: webViewButton];
+    webViewButton.frame = CGRectMake(100, 200, 100, 50);
 }
 
 - (void)logout {
@@ -61,14 +68,17 @@
         @"deptId": @"1552585051064762369"
     };
     
-//    NSMutableURLRequest *request = [requestSerializer requestWithMethod:@"GET" URLString:urlString parameters:params error:nil];
-//    NSURLSessionDataTask *dataTask = [manager ];
-//    [dataTask resume];
     [manager POST:urlString parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@", responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@", error);
     }];
+}
+
+- (void)turnWebView
+{
+    WebViewController *webViewController = [[WebViewController alloc] init];
+    [self presentViewController:webViewController animated:YES completion:nil];
 }
 
 @end
