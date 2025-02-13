@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		38BB92777BC46BC7059BB180 /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA6801EE2375F31E2006AB8 /* Pods_TestApp.framework */; };
 		F6654FB42C2A9DF400188914 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6654FB32C2A9DF400188914 /* WebViewController.m */; };
+		F66E460D2D5D87F2000FE28F /* EntryReviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F66E460C2D5D87F2000FE28F /* EntryReviewController.m */; };
 		F698992C2BCE702D00F2F625 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F698992B2BCE702D00F2F625 /* AppDelegate.m */; };
 		F698992F2BCE702D00F2F625 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F698992E2BCE702D00F2F625 /* SceneDelegate.m */; };
 		F69899372BCE702E00F2F625 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F69899362BCE702E00F2F625 /* Assets.xcassets */; };
@@ -26,6 +27,8 @@
 		AD57C9DB891F44666E7D6964 /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F6654FB22C2A9DF400188914 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		F6654FB32C2A9DF400188914 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		F66E460B2D5D87F2000FE28F /* EntryReviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EntryReviewController.h; sourceTree = "<group>"; };
+		F66E460C2D5D87F2000FE28F /* EntryReviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EntryReviewController.m; sourceTree = "<group>"; };
 		F69435172BD8FBC9006FE907 /* TestApp.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestApp.pch; sourceTree = "<group>"; };
 		F69899272BCE702D00F2F625 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F698992A2BCE702D00F2F625 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				F698994B2BCE7AE300F2F625 /* Tool.m */,
 				F6654FB22C2A9DF400188914 /* WebViewController.h */,
 				F6654FB32C2A9DF400188914 /* WebViewController.m */,
+				F66E460B2D5D87F2000FE28F /* EntryReviewController.h */,
+				F66E460C2D5D87F2000FE28F /* EntryReviewController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				F6654FB42C2A9DF400188914 /* WebViewController.m in Sources */,
 				F698994C2BCE7AE300F2F625 /* Tool.m in Sources */,
 				F6BBB5752BDA51580050E3E9 /* CustomJSONResponseSerializer.m in Sources */,
+				F66E460D2D5D87F2000FE28F /* EntryReviewController.m in Sources */,
 				F69899492BCE71D900F2F625 /* HomeController.m in Sources */,
 				F698992F2BCE702D00F2F625 /* SceneDelegate.m in Sources */,
 			);
@@ -378,6 +384,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -392,6 +399,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_PREFIX_HEADER = $SRCROOT/TestApp/TestApp.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestApp/Info.plist;
@@ -426,6 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_PREFIX_HEADER = $SRCROOT/TestApp/TestApp.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestApp/Info.plist;

@@ -7,5 +7,6 @@ target 'TestApp' do
 
   pod 'CocoaLumberjack', '~>3.8.5'
   pod 'AFNetworking', '~>4.0.1'
+  pod 'Masonry', '~>1.1.0'
 
 end

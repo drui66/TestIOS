@@ -8,6 +8,7 @@
 #import "HomeController.h"
 #import "LoginController.h"
 #import "WebViewController.h"
+#import "EntryReviewController.h"
 #import "Tool.h"
 #import <AFNetworking/AFNetworking.h>
 #import "CustomJSONResponseSerializer.h"
@@ -40,6 +41,12 @@
     [webViewButton addTarget:self action:@selector(turnWebView) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview: webViewButton];
     webViewButton.frame = CGRectMake(100, 200, 100, 50);
+
+    UIButton *entryReviewButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [entryReviewButton setTitle:@"审核详情" forState:UIControlStateNormal];
+    [entryReviewButton addTarget:self action:@selector(turnEntryReview) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview: entryReviewButton];
+    entryReviewButton.frame = CGRectMake(100, 250, 100, 50);
 }
 
 - (void)logout {
@@ -79,6 +86,13 @@
 {
     WebViewController *webViewController = [[WebViewController alloc] init];
     [self presentViewController:webViewController animated:YES completion:nil];
+}
+
+- (void)turnEntryReview
+{
+    EntryReviewController *viewController = [[EntryReviewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [nav pushViewController:viewController animated:YES];
 }
 
 @end

@@ -31,7 +31,8 @@
     UIWindow *keyWindow = [Tool getKeyWindow];
     if (keyWindow != nil) {
         HomeController *homeController = [[HomeController alloc] init];
-        keyWindow.rootViewController = homeController;
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:homeController];
+        keyWindow.rootViewController = navigationController;
         [keyWindow makeKeyAndVisible];
     }
 }
